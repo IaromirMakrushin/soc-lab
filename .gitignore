@@ -1,0 +1,18 @@
+# OS / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+*~
+
+# Local working notes (internal handoff, not part of the public project)
+HANDOFF.md
+
+# Never commit real secrets, exports, or captured hashes
+*.pfx
+*.key
+*.kirbi
+*.ccache
+kerberoast*.txt
+asrep*.txt
+*-passwords.txt
+wazuh-install-files*

@@ -1,0 +1,49 @@
+<!--
+  Custom Wazuh detection rules for the AD SOC lab.
+  Deploy on WAZUH01 by appending these <rule> blocks to
+  /var/ossec/etc/rules/local_rules.xml, then restart wazuh-manager.
+
+  Rule 100100 - Kerberoasting detection (MITRE T1558.003)
+  Event 4769 = "A Kerberos service ticket was requested". This is normal and
+  high-volume, so Wazuh does not alert on it by default. The tell-tale sign of
+  Kerberoasting is a ticket requested with the WEAK RC4 cipher (ticketEncryptionType
+  0x17) for a *user* service account (serviceName not ending in $, which would be a
+  computer account). Modern clients request AES (0x12); a lone RC4 request for a
+  service SPN is a strong roasting indicator.
+-->
+<group name="windows,kerberoasting,">
+
+  <rule id="100100" level="12">
+    <if_sid>60103</if_sid>
+    <field name="win.system.eventID">4769</field>
+    <field name="win.eventdata.ticketEncryptionType">0x17</field>
+    <description>Possible Kerberoasting - RC4 ticket for $(win.eventdata.serviceName) by $(win.eventdata.targetUserName)</description>
+    <mitre>
+      <id>T1558.003</id>
+    </mitre>
+    <group>pci_dss_10.6.1,gdpr_IV_35.7.d,</group>
+  </rule>
+
+</group>
+
+<!--
+  Rule 100101 - AS-REP Roasting detection (MITRE T1558.004)
+  Event 4768 = "A Kerberos authentication ticket (TGT) was requested".
+  preAuthType 0 means the TGT was issued WITHOUT Kerberos pre-authentication,
+  which only happens for accounts with "Do not require pre-auth" set - the exact
+  precondition for AS-REP roasting.
+-->
+<group name="windows,asrep_roasting,">
+
+  <rule id="100101" level="12">
+    <if_sid>60103</if_sid>
+    <field name="win.system.eventID">4768</field>
+    <field name="win.eventdata.preAuthType">0</field>
+    <description>Possible AS-REP Roasting - TGT without pre-auth for $(win.eventdata.targetUserName) from $(win.eventdata.ipAddress)</description>
+    <mitre>
+      <id>T1558.004</id>
+    </mitre>
+    <group>pci_dss_10.6.1,gdpr_IV_35.7.d,</group>
+  </rule>
+
+</group>
