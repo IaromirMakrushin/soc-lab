@@ -135,5 +135,5 @@ Kali Linux · netexec · impacket · John the Ripper · PingCastle · MITRE ATT&
 **Iaromir Makrushin** — IT-säkerhetstekniker student (TUC Yrkeshögskola, Linköping), seeking a LIA internship.
 
 - GitHub: [@IaromirMakrushin](https://github.com/IaromirMakrushin)
-<!-- LinkedIn: add your profile URL here, e.g. https://www.linkedin.com/in/your-handle -->
+- LinkedIn: [iaromir-makrushin](https://www.linkedin.com/in/iaromir-makrushin-a285543a9/)
 
