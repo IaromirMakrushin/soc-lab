@@ -1,6 +1,6 @@
 # AD + Wazuh SOC-labb — sammanfattning (svenska)
 
-Ett eget byggt Active Directory-nätverk som övervakas med SIEM-verktyget **Wazuh**,
+Ett egenbyggt Active Directory-nätverk som övervakas med SIEM-verktyget **Wazuh**,
 attackeras från **Kali Linux** och därefter härdas. För varje teknik finns en
 detektionsregel, en incidentrapport och en verifierad åtgärd. Allt är skriptat och
 reproducerbart.
@@ -32,13 +32,13 @@ Alla virtuella maskiner körs på en **isolerad** Hyper-V-switch (`LAB-Isolated`
 
 | # | Teknik (ATT&CK) | Resultat | Detektion |
 |---|-----------------|----------|-----------|
-| 01 | Nätverksskanning — *T1046* | Kartlade DC:ns tjänster | **Blind fläck** — agenter ser inte paket |
+| 01 | Nätverksskanning — *T1046* | Kartlade DC:ns tjänster | **Blindfläck** — agenter ser inte paket |
 | 02 | Kerberoasting — *T1558.003* | Knäckte `svc-sql` offline | Tyst som standard → **egen regel 100100** |
 | 03 | Lösenordsspray — *T1110.003* | Många misslyckade inloggningar | **Upptäcks direkt** (regel 60204) |
 | 04 | AS-REP roasting — *T1558.004* | Knäckte `b.berg` offline | Tyst som standard → **egen regel 100101** |
 
-**Lärdom:** ett SIEM är starkast mot "högljudd" autentiseringsmissbruk och svagast mot
-tyst missbruk som ser normalt ut — eller sådant som aldrig når en host-logg. Att veta
+**Lärdom:** ett SIEM är starkast mot högljutt autentiseringsmissbruk och svagast mot
+tyst missbruk som ser normalt ut — eller sådant som aldrig når en värdlogg. Att veta
 skillnaden är den centrala analytikerkunskapen.
 
 ## Härdning
