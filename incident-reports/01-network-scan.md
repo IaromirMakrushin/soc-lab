@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Date** | 2026-10-02 |
-| **Analyst** | (your name) |
+| **Analyst** | Iaromir Makrushin |
 | **Severity** | Low–Medium (reconnaissance, no compromise) |
 | **MITRE ATT&CK** | T1046 — Network Service Discovery; T1595 — Active Scanning |
 | **Source** | KALI01 (10.10.10.50) |

@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Date** | 2026-10-02 |
-| **Analyst** | (your name) |
+| **Analyst** | Iaromir Makrushin |
 | **Severity** | High (service-account credential compromise) |
 | **MITRE ATT&CK** | T1558.003 — Steal or Forge Kerberos Tickets: Kerberoasting |
 | **Source** | KALI01 (10.10.10.50), authenticated as a standard domain user |

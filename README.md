@@ -127,3 +127,13 @@ docs/sammanfattning.md   Swedish summary
 
 *Tools: Hyper-V · Windows Server 2025 · Windows 11 · Ubuntu 24.04 · Wazuh 4.14 · Sysmon ·
 Kali Linux · netexec · impacket · John the Ripper · PingCastle · MITRE ATT&CK*
+
+---
+
+## Author
+
+**Iaromir Makrushin** — IT-säkerhetstekniker student (TUC Yrkeshögskola, Linköping), seeking a LIA internship.
+
+- GitHub: [@IaromirMakrushin](https://github.com/IaromirMakrushin)
+<!-- LinkedIn: add your profile URL here, e.g. https://www.linkedin.com/in/your-handle -->
+

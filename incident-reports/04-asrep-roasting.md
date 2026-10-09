@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Date** | 2026-10-02 |
-| **Analyst** | (your name) |
+| **Analyst** | Iaromir Makrushin |
 | **Severity** | High (credential compromise, NO credentials required to start) |
 | **MITRE ATT&CK** | T1558.004 — Steal or Forge Kerberos Tickets: AS-REP Roasting |
 | **Source** | KALI01 (10.10.10.50) |

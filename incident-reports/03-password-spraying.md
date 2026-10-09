@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Date** | 2026-10-02 |
-| **Analyst** | (your name) |
+| **Analyst** | Iaromir Makrushin |
 | **Severity** | Medium–High (credential access attempt against many accounts) |
 | **MITRE ATT&CK** | T1110.003 — Brute Force: Password Spraying |
 | **Source** | KALI01 (10.10.10.50) |
